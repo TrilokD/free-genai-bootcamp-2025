@@ -1,160 +1,72 @@
-## Executive Summary
+# Executive Summary
 
-This architecture represents a **language learning platform** that leverages **Generative AI (GenAI)** capabilities for sentence construction, vocabulary building, and immersive learning activities. The system is modular and scalable, comprising three main components:
+This architecture represents a language learning platform that leverages Generative AI (GenAI) capabilities for interactive learning experiences such as sentence construction, vocabulary enhancement, and immersive activities. It provides distinct interfaces for students and teachers, ensuring personalized, engaging, and efficient language education.
 
-1. **Frontend Language Portal**: Interface for students and teachers.
-2. **Backend API**: Manages vector operations, activity tracking, and GenAI interactions.
-3. **GenAI Systems**: Powers sentence construction, context-based learning responses, and natural language understanding.
-
----
-
-## Functional Requirements
-
-- Support multiple interactive learning activities:
+## Functional Overview
+- **Interactive Learning Activities:**
   - Sentence Constructor
-  - Vocabulary Building
   - Writing Practice
+  - Immersive Games
   - Visual Flashcard Vocabulary
   - Speak to Learn
-- Enable teacher administration and content management capabilities.
-- Provide a vectorized knowledge base for enhanced learning responses.
-- Implement guardrails for input/output in GenAI interactions.
-- Allow progress tracking for learning activities.
+
+- Teacher administration for content management and monitoring student progress.
+- Utilizes vectorized knowledge bases and AI guardrails to ensure the quality, safety, and relevance of interactions.
+
+## Key Assumptions
+- Reliable internet connectivity.
+- Users possess basic digital literacy.
+- Primary language focus: Russian.
+
+## Technical Highlights
+- GenAI-driven response generation with advanced guardrails.
+- Efficient content retrieval using Vector databases.
+- Modular, scalable design to support future expansions.
+
+## Future Opportunities
+- Expansion to multi-language support.
+- Additional immersive learning activities integration.
+- Enhanced analytics and user management.
 
 ---
 
-## Assumptions
+## Architecture Overview (High-Level)
 
-- Internet connectivity is required for GenAI interactions.
-- Users (students/teachers) possess basic digital literacy.
-- The system supports single-tenancy with no multi-user concurrency.
-- A unified SQL database will handle both application data and vector embeddings.
-- LLMs are accessible via API endpoints for embeddings and text generation.
-- Sufficient computing resources are available for real-time vector operations.
-- The primary language supported is Russian.
+```mermaid
+graph TD
+    %% Main Users
+    Users([Students / Teachers]) --> Portal
 
----
+    %% Language Portal
+    subgraph Portal[Language Learning Portal]
+        direction TB
+        Activities[Interactive Learning Activities]
+        Admin[Teacher Administration]
+    end
 
-## Data Strategy
+    %% Connect Portal to GenAI Systems
+    Portal --> GenAI
 
-### Data Types
+    %% GenAI System
+    subgraph GenAI[AI-Powered Learning System]
+        direction TB
+        LLM[Large Language Model]
+        RAG[Retrieval-Augmented Generation]
+        Guardrails[Content Safety Guardrails]
+        VectorDB[Knowledge Base / Vector Database]
+    end
 
-**Structured Data:**
-- User profiles (students/teachers)
-- Vocabulary database
-- Progress tracking data
-- Vector embeddings
+    %% Internal GenAI Flow
+    LLM --> GuardRails
+    GuardRails --> VectorDB
+    VectorDB --> LLM
 
-**Unstructured Data:**
-- Knowledge base content
-- AI-generated responses
-- Sample sentence constructions
+    %% Connect back to Users
+    GenAI --> Users
 
-### Data Flow
+## Future Directions
+- Expand activities and multi-language support.
+- Implement robust analytics and user authentication.
+- Adopt advanced caching for performance enhancement.
 
-1. **Input Processing:**
-   - The student initiates a sentence construction activity by providing an English sentence.
-   - Backend API processes the input, fetches related data from the SQL database, and triggers an LLM request.
-   - The LLM provides contextual hints, vocabulary suggestions, and example sentences.
-   - The student's response is validated with additional clues provided as needed.
-   - Complexity of subsequent sentences increases dynamically based on user performance.
-
-2. **Storage:**
-   - SQL database for persistent storage.
-   - Vector database for fast retrieval.
-   - Cache layer for frequently accessed data.
-
----
-
-## Technical Architecture
-
-### Components Breakdown
-
-1. **Frontend Language Portal:**
-   - Sentence construction activity interface.
-   - Visual vocabulary flashcards.
-   - Teacher administrative dashboard.
-
-2. **Backend API:**
-   - Vectorization and embedding service.
-   - Knowledge base management.
-   - Progress tracking and user activity logs.
-   - Integration with GenAI systems.
-
-3. **GenAI Systems:**
-   - Large Language Model (LLM) for text generation and embeddings.
-   - Guardrails for input and output validation.
-   - Integration with external internet resources and vector databases.
-
-### Security & Governance
-
-1. **Access Control:**
-   - Currently, no user authentication implemented (future scope).
-
-2. **Data Protection:**
-   - No encryption or privacy measures currently in place (out of scope).
-
----
-
-## Monitoring & Performance
-
-### Key Metrics
-
-- Response accuracy (out of scope)
-- Real-time system latency (out of scope)
-- User engagement rates (out of scope)
-
-### Scaling Considerations
-
-- Modular design enables future scalability.
-- Potential for cloud integration to manage larger workloads.
-
----
-
-## Risk Mitigation
-
-### Technical Risks
-- **LLM Downtime:** Implement fallback mechanisms for unavailable services.
-- **Database Performance:** Regular optimization of vector operations.
-- **System Latency:** Use caching strategies to reduce response times.
-
-### Operational Risks
-- **Data Consistency:** Schedule regular database backups.
-- **System Uptime:** Introduce redundancy for critical components.
-- **Response Quality:** Continuously refine input/output guardrails.
-
----
-
-## Future Considerations
-
-- Integration of additional immersive learning activities.
-- Enhanced vectorization techniques for improved response time.
-- Expansion of the knowledge base for broader context understanding.
-- Implementation of multi-language support.
-- Advanced analytics dashboard for teachers and admins.
-- Authentication and user management system.
-
----
-
-## Business Considerations
-
-### Use Cases
-- Clear definitions of language learning outcomes.
-- Customized learning paths for individual students.
-
-### Complexity Analysis
-- Integration of LLMs introduces multiple moving parts (database, API, model calls).
-- Requires continuous monitoring for model performance and data integrity.
-
-### Cost Levers
-- Model size and hosting costs.
-- Infrastructure requirements for high availability.
-
-### Vendor Lock-in Mitigation
-- Use of open-source models and modular APIs to ensure flexibility.
-
----
-
-## Conclusion
-
-This GenAI-powered language learning platform offers a structured and modular approach for personalized language education. With a focus on scalability, future-proofing, and ease of integration, the architecture sets a solid foundation for the development of advanced language learning tools.
+This GenAI architecture provides a scalable, clear pathway for future improvements, ensuring seamless growth and adaptability.
