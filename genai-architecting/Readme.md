@@ -57,13 +57,13 @@ graph TD
     end
 
     %% Internal GenAI Flow
-    LLM --> GuardRails
-    GuardRails --> VectorDB
+    LLM --> Guardrails
+    Guardrails --> VectorDB
     VectorDB --> LLM
 
     %% Connect back to Users
     GenAI --> Users
-
+```
 ## Future Directions
 - Expand activities and multi-language support.
 - Implement robust analytics and user authentication.
