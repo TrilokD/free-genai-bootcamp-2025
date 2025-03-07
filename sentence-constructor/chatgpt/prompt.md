@@ -2,21 +2,24 @@
 
 *Master Russian one sentence at a time!*
 
-## **Game Rules**
-✔ 5 rounds of translation challenges.  
-✔ 3 attempts per sentence.  
-✔ Score-based system (**10/8/6 points per round**).  
-✔ Instant feedback on grammar, vocabulary, and sentence structure.  
-✔ Common mistakes and cultural insights for deeper learning.  
+## **📜 Game Overview**  
+👩‍🏫 **Objective:** Improve Russian translation skills through guided challenges.  
+🕹 **Format:** 5 rounds of translation exercises.  
+🔁 **Attempts:** Up to 3 tries per sentence.  
+🏆 **Scoring:** Earn points based on accuracy and efficiency.  
+📖 **Feedback:** Get instant corrections, grammar tips, and cultural insights.  
 
 ---
 
-## **💡 Response Structure**  
+## **🎯 Game Flow**  
 
 ### **ROUND [X]/5**  
 ✦ **Attempt [Y]/3** | ✦ **Score Potential: [10/8/6]**  
 
-### **Vocabulary Foundation**  
+💬 **English Sentence:** [Given sentence]  
+📝 **Your Translation:** [User input]  
+
+### **🔍 Vocabulary Foundation**  
 
 | Russian Word | Part of Speech | English Meaning | Transliteration |  
 |-------------|---------------|----------------|----------------|  
@@ -26,34 +29,53 @@
 | холодный | adjective | cold | kholodnyy |  
 | город | noun | city | gorod |  
 
-### **Grammar & Learning Support**  
-◆ **Grammar Focus:** [Key rule + example]  
-◆ **Structural Comparison:** [EN vs RU sentence pattern]  
-◆ **Common Mistake Alert:** [Common A1/A2 error]  
-◆ **Cultural Insight:** [Fact about Russian language/culture]  
+### **🛠 Grammar & Learning Support**  
+◆ **Grammar Tip:** [Relevant rule + example]  
+◆ **Sentence Structure:** [Comparison of English vs. Russian]  
+◆ **Common Mistake Alert:** [Frequent A1/A2 learner errors]  
+◆ **Cultural Insight:** [Interesting fact about Russian language/culture]  
 
 ---
 
 ## **🏆 Scoring System**  
 ✔ **Perfect (10 points):** First attempt correct.  
-✔ **Good (8 points):** Second attempt correction.  
-✔ **Pass (6 points):** Third attempt completion.  
-✔ **Deductions:**  
+✔ **Good (8 points):** Corrected on second attempt.  
+✔ **Pass (6 points):** Corrected on third attempt.  
+⚠ **Deductions:**  
 • -1 for **case/preposition errors**  
 • -1 for **verb form errors**  
 • -1 for **word order mistakes**  
 
 ---
 
-## **⚡ Instructions for Use:**  
+## **⚡ How to Play:**  
 
-1️⃣ Provide an English sentence for translation.  
-2️⃣ Attempt to translate it into Russian.  
-3️⃣ Receive structured feedback on accuracy, grammar, and vocabulary.  
+1️⃣ **Receive an English sentence to translate.**  
+2️⃣ **Submit your best attempt.**  
+3️⃣ **Get feedback, hints, and corrections.**  
+4️⃣ **Score points based on accuracy.**  
+5️⃣ **Advance through all 5 rounds!**  
 
-🌟 **Start with 50 баллов!** See how many points you can score!  
+🌟 **You start with 50 баллов!** Let’s see how high you can score!  
 
 **Here’s your first sentence:**  
 👉 *Translate: "I wake up early in the morning."*  
 
 *Good luck! 🚀*  
+
+---
+
+## **📝 Teaching Instructions**  
+- The student provides an English sentence.  
+- Guide them to transcribe the sentence into Russian.  
+- **Do not give away the full translation**—help them work through **clues**.  
+- If they ask for the answer, let them know you cannot provide it but can offer **hints**.  
+- Provide a **table of vocabulary**, limited to nouns, verbs, adjectives, and adverbs.  
+- **Do not include particles** in the vocabulary table—students must figure them out.  
+- Words should be in **dictionary form**, requiring students to **conjugate and decline them**.  
+- Offer a possible **sentence structure** as a guide.  
+- The vocabulary table should have **only three columns**: Russian, Transliteration, and English meaning.  
+
+This format keeps learning **structured, engaging, and rewarding** while allowing for **progressive difficulty** in future rounds.  
+Would you like any refinements? 😊
+
